@@ -8,6 +8,14 @@ from sqlalchemy import func
 
 app = FastAPI(title="G-Scores (FastAPI)")
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],   # Cho phép mọi domain
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # Tạo bảng khi khởi động lần đầu
 Base.metadata.create_all(bind=engine)
 
