@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tra cứu & Thống kê điểm thi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Thống kê & Tra cứu điểm thi</h1>
+
+    <!-- Tra cứu -->
+    <section>
+      <h2>🔍 Tra cứu điểm</h2>
+      <form id="lookup-form">
+        <input type="text" id="sbd-input" placeholder="Nhập số báo danh..." required />
+        <button type="submit">Xem điểm</button>
+      </form>
+      <div id="lookup-result" class="result-box"></div>
+    </section>
+
+    <!-- Thống kê -->
+    <section>
+      <h2>Thống kê điểm theo môn</h2>
+      <button onclick="loadStats()">Xem thống kê</button>
+      <div id="stats-result"></div>
+    </section>
+
+    <!-- Top 10 -->
+    <section>
+      <h2>Top 10 thí sinh khối A (Toán + Lý + Hóa)</h2>
+      <button onclick="loadTop10()">Tải Top 10</button>
+      <table id="top10-table">
+        <thead>
+          <tr>
+            <th>Số báo danh</th>
+            <th>Toán</th>
+            <th>Lý</th>
+            <th>Hóa</th>
+            <th>Tổng</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
